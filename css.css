@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.computer{
+	margin:10px auto;
+	width:600px;
+	height:400px;
+	background:url(image/computer.png);
+	background-size:600px 400px;
+}
+.info{
+	margin-left:100px;
+	padding-top:50px;
+	display:block;
+}
+.jl{
+	width:600px;
+	background:url(li.png);
+	background-size:600px auto;
+}
+.li{
+	
+	
+}
