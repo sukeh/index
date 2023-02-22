@@ -1,21 +1,66 @@
-<!doctype html>
-<html>
-	<head>
-		<title>my</title>
-		<meta charset="utf-8"/>
-		<link rel="stylesheet" type="text/css" href="css.css"/>
-	</head>
-	<body style="background-color:#000;color:white;">
-		<div>
-			<div class="computer">
-				<div class="info">
-					<p>姓名：苏克豪</p>
-					<p>性别：男</p>
-					<p>tel：0571-8586888</p>
-					<a href="li.html"><button >打开</button> </a>
-				</div>
-			</div>
-		</div>
-	</body>
-</html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunction() {
+            total_length_obj = document.getElementById("total_length"); // 找到元素
+            num_obj = document.getElementById("num");
+            bord_length_obj = document.getElementById("bord_length");
+            bord_num_obj = document.getElementById("bord_num");
+            other_length_obj = document.getElementById("other_length");
+            per_length_obj = document.getElementById("per_length");
+
+            total_length_v = total_length_obj.value;
+            num_v = num_obj.value;
+            bord_length_v = bord_length_obj.value;
+            bord_num_v = bord_num_obj.value;
+            other_length_v = other_length_obj.value;
+            per_length_v = per_length_obj.value;
+
+            per_length_obj.value = (total_length_v - other_length_v - (bord_length_v * bord_num_v)) / num_v
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <table>
+
+            <tr>
+                <td>总长度：</td>
+                <td><input type="text" id="total_length" value="0" name="total_length" onkeyup="myFunction()"></td>
+            </tr>
+            <tr>
+                <td>几块板：</td>
+                <td><input type="text" id="num" value="1" name="num" onkeyup="myFunction()"></td>
+            </tr>
+            <tr>
+                <td>边框厚度：</td>
+                <td><input type="text" id="bord_length" value="0" name="bord_length" onkeyup="myFunction()"></td>
+            </tr>
+            <tr>
+                <td> 几个边框：</td>
+                <td><input type="text" id="bord_num" value="2" name="bord_num" onkeyup="myFunction()"></td>
+            </tr>
+            <tr>
+                <td> 其他长度：</td>
+                <td><input type="text" id="other_length" value="0" name="other_length" onkeyup="myFunction()"></td>
+            </tr>
+
+            <tr>
+
+                <td>每块板长度：</td>
+                <td><input type="text" id="per_length" value="0" name="per_length" readonly="readonly" style="border:none"></td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+
+</html>
